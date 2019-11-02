@@ -14,6 +14,7 @@
 		862EABC7236CFD6800965239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 862EABC5236CFD6800965239 /* Main.storyboard */; };
 		862EABC9236CFD6A00965239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 862EABC8236CFD6A00965239 /* Assets.xcassets */; };
 		862EABCC236CFD6A00965239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 862EABCA236CFD6A00965239 /* LaunchScreen.storyboard */; };
+		862EABD4236CFE2500965239 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EABD3236CFE2500965239 /* Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		862EABC8236CFD6A00965239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		862EABCB236CFD6A00965239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		862EABCD236CFD6A00965239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		862EABD3236CFE2500965239 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				862EABC8236CFD6A00965239 /* Assets.xcassets */,
 				862EABCA236CFD6A00965239 /* LaunchScreen.storyboard */,
 				862EABCD236CFD6A00965239 /* Info.plist */,
+				862EABD3236CFE2500965239 /* Controller.swift */,
 			);
 			path = Filmes;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				862EABD4236CFE2500965239 /* Controller.swift in Sources */,
 				862EABC0236CFD6800965239 /* RootViewController.swift in Sources */,
 				862EABC4236CFD6800965239 /* ModelController.swift in Sources */,
 				862EABC2236CFD6800965239 /* DataViewController.swift in Sources */,
