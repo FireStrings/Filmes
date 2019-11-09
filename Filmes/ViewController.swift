@@ -7,13 +7,50 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
+    @IBOutlet var retreieve: UIButton!
+//    func ret(){
+//
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+     
+        
         print("sadasdasdasdasdasdasdas")
-
+         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Pessoa", in: context)
+        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+        
+        newUser.setValue("Leonardo", forKey: "nome")
+        newUser.setValue("Lira", forKey: "sobrenome")
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+        }
+        print("OK1")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Pessoa")
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                print(data.value(forKey: "nome") as! String)
+            }
+            
+        } catch {
+            
+            print("Failed")
+        }
+        print("OK2")
+//        let leo = context
+        
+        
         // Do any additional setup after loading the view.
     }
 
