@@ -23,6 +23,10 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     var pageData: [String] = []
 
 
+    @IBAction func cadastrar(_ sender: Any) {
+        
+    }
+    
     override init() {
         super.init()
         // Create the data model.

@@ -12,6 +12,7 @@ class DataViewController: UIViewController {
 
     @IBOutlet weak var dataLabel: UILabel!
     var dataObject: String = ""
+    var leo : String = ""
 
 
     override func viewDidLoad() {
