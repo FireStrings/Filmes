@@ -10,48 +10,49 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-
-    @IBOutlet var retreieve: UIButton!
+    
+    
+    @IBOutlet var txtTitulo: UITextField!
+    @IBOutlet var txtGenero: UITextField!
 //    func ret(){
 //
 //    }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        print("Cheguei na classe")
      
         
-        print("sadasdasdasdasdasdasdas")
-         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Pessoa", in: context)
+       
+//        let leo = context
+        
+        
+        // Do any additional setup after loading the view.
+    }
+    @IBAction func insert(_ sender: UIButton) {
+        insert()
+    }
+   
+    @IBAction func voltar(_ sender: UIButton) {
+        print("Voltando")
+    }
+    func insert(){
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Filme", in: context)
         let newUser = NSManagedObject(entity: entity!, insertInto: context)
         
-        newUser.setValue("Leonardo", forKey: "nome")
-        newUser.setValue("Lira", forKey: "sobrenome")
+        newUser.setValue(txtTitulo.text, forKey: "titulo")
+        newUser.setValue(txtGenero.text, forKey: "genero")
         do {
             try context.save()
         } catch {
             print("Failed saving")
         }
-        print("OK1")
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Pessoa")
-        //request.predicate = NSPredicate(format: "age = %@", "12")
-        request.returnsObjectsAsFaults = false
-        do {
-            let result = try context.fetch(request)
-            for data in result as! [NSManagedObject] {
-                print(data.value(forKey: "nome") as! String)
-            }
-            
-        } catch {
-            
-            print("Failed")
-        }
-        print("OK2")
-//        let leo = context
         
+       print("Salvo")
         
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

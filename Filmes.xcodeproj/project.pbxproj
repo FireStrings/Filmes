@@ -17,6 +17,8 @@
 		8637DB1B2376483800768A60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8637DB192376483800768A60 /* ViewController.swift */; };
 		8637DB1C2376483800768A60 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8637DB1A2376483800768A60 /* ViewController.xib */; };
 		8637DB1F237649E600768A60 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8637DB1D237649E600768A60 /* Model.xcdatamodeld */; };
+		865BF8E5238751560049293E /* ConsultaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865BF8E4238751560049293E /* ConsultaView.xib */; };
+		865BF8E72387522D0049293E /* ConsultaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BF8E62387522D0049293E /* ConsultaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		8637DB192376483800768A60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8637DB1A2376483800768A60 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		8637DB1E237649E600768A60 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		865BF8E4238751560049293E /* ConsultaView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsultaView.xib; sourceTree = "<group>"; };
+		865BF8E62387522D0049293E /* ConsultaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 				862EABBF236CFD6800965239 /* RootViewController.swift */,
 				862EABC1236CFD6800965239 /* DataViewController.swift */,
 				862EABC3236CFD6800965239 /* ModelController.swift */,
+				865BF8E4238751560049293E /* ConsultaView.xib */,
 				862EABC5236CFD6800965239 /* Main.storyboard */,
 				862EABC8236CFD6A00965239 /* Assets.xcassets */,
 				862EABCA236CFD6A00965239 /* LaunchScreen.storyboard */,
@@ -75,6 +80,7 @@
 				8637DB192376483800768A60 /* ViewController.swift */,
 				8637DB1A2376483800768A60 /* ViewController.xib */,
 				8637DB1D237649E600768A60 /* Model.xcdatamodeld */,
+				865BF8E62387522D0049293E /* ConsultaViewController.swift */,
 			);
 			path = Filmes;
 			sourceTree = "<group>";
@@ -138,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				862EABCC236CFD6A00965239 /* LaunchScreen.storyboard in Resources */,
+				865BF8E5238751560049293E /* ConsultaView.xib in Resources */,
 				862EABC9236CFD6A00965239 /* Assets.xcassets in Resources */,
 				8637DB1C2376483800768A60 /* ViewController.xib in Resources */,
 				862EABC7236CFD6800965239 /* Main.storyboard in Resources */,
@@ -152,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8637DB1B2376483800768A60 /* ViewController.swift in Sources */,
+				865BF8E72387522D0049293E /* ConsultaViewController.swift in Sources */,
 				862EABC0236CFD6800965239 /* RootViewController.swift in Sources */,
 				862EABC4236CFD6800965239 /* ModelController.swift in Sources */,
 				862EABC2236CFD6800965239 /* DataViewController.swift in Sources */,
