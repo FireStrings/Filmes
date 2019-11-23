@@ -12,6 +12,8 @@ import CoreData
 class ViewController: UIViewController {
     
     
+    @IBOutlet var txtDiretor: UITextField!
+    @IBOutlet var txtAno: UITextField!
     @IBOutlet var txtTitulo: UITextField!
     @IBOutlet var txtGenero: UITextField!
 //    func ret(){
@@ -45,8 +47,15 @@ class ViewController: UIViewController {
         
         newUser.setValue(txtTitulo.text, forKey: "titulo")
         newUser.setValue(txtGenero.text, forKey: "genero")
+        newUser.setValue(txtAno.text, forKey: "ano")
+        newUser.setValue(txtDiretor.text, forKey: "diretor")
         do {
             try context.save()
+            
+            var alertView = UIAlertController(title: "Sucesso", message: "Cadastro efetuado com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
+            alertView.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertView, animated: true, completion: nil)
+            
         } catch {
             print("Failed saving")
         }

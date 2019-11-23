@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Filme" representedClassName="Filme" syncable="YES" codeGenerationType="class">
+        <attribute name="ano" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diretor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="genero" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Filme" positionX="-63" positionY="-18" width="128" height="30"/>
+        <element name="Filme" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>
