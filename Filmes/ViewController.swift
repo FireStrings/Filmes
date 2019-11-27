@@ -41,23 +41,38 @@ class ViewController: UIViewController {
         print("Voltando")
     }
     func insert(){
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Filme", in: context)
-        let newUser = NSManagedObject(entity: entity!, insertInto: context)
         
-        newUser.setValue(txtTitulo.text, forKey: "titulo")
-        newUser.setValue(txtGenero.text, forKey: "genero")
-        newUser.setValue(txtAno.text, forKey: "ano")
-        newUser.setValue(txtDiretor.text, forKey: "diretor")
-        do {
-            try context.save()
-            
-            var alertView = UIAlertController(title: "Sucesso", message: "Cadastro efetuado com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
+        if txtTitulo.text == "" && txtAno.text == "" && txtGenero.text == "" && txtDiretor.text == "" {
+            let alertView = UIAlertController(title: "erro", message: "ERRO! Preencha todos os campos.", preferredStyle: UIAlertControllerStyle.alert)
             alertView.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alertView, animated: true, completion: nil)
+        }else{
             
-        } catch {
-            print("Failed saving")
+        
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "Filme", in: context)
+            let newUser = NSManagedObject(entity: entity!, insertInto: context)
+            
+            newUser.setValue(txtTitulo.text, forKey: "titulo")
+            newUser.setValue(txtGenero.text, forKey: "genero")
+            newUser.setValue(txtAno.text, forKey: "ano")
+            newUser.setValue(txtDiretor.text, forKey: "diretor")
+            
+            txtTitulo.text = ""
+            txtGenero.text = ""
+            txtAno.text = ""
+            txtDiretor.text = ""
+            
+            do {
+                try context.save()
+                
+                let alertView = UIAlertController(title: "Sucesso", message: "Cadastro efetuado com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
+                alertView.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alertView, animated: true, completion: nil)
+                
+            } catch {
+                print("Failed saving")
+            }
         }
         
        print("Salvo")
